@@ -1,0 +1,7 @@
+{
+  "name": "Himnario",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

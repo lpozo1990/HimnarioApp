@@ -1,0 +1,22 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" no-border no-scroll class="ion-padding">
+  <ion-list>
+    <ion-list-header> Datos de Contacto </ion-list-header>
+    <ion-item>
+      <ion-icon name="mail"></ion-icon> lpozo1990@gmail.com
+    </ion-item>
+    <ion-item (click)="call()">
+      <ion-icon name="call"></ion-icon> +53 58766375
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Lista de Himnos</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar no-border (ionChange)="search($event)" placeholder=""></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item class="ion-justify-content-center" detail [routerLink]="'/detail/' + item.id"
+      *ngFor="let item of himnos  | search:textBox"> <br>
+      <ion-icon name="book"></ion-icon>
+      <ion-label class="ion-justify-content-center">{{ item.id }} - {{ item.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<div class="spin" *ngIf="!himnos">
+  <ion-spinner name="dots"></ion-spinner>
+</div>
