@@ -11,9 +11,12 @@ export class SearchPipe implements PipeTransform {
     }
     text = text.toLowerCase();
     return list.filter(item => {
+      console.log(typeof item.id);
       return item.title.toLowerCase()
-        .includes(text);
+        .includes(text) || item.id.toString().toLowerCase()
+        .includes(text) ;
     });
+    
 
   }
 
