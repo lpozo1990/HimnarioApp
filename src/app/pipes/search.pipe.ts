@@ -11,10 +11,12 @@ export class SearchPipe implements PipeTransform {
     }
     text = text.toLowerCase();
     return list.filter(item => {
-      console.log(typeof item.id);
+      /* You can search both by id and by name of the anthem */
       return item.title.toLowerCase()
-        .includes(text) || item.id.toString().toLowerCase()
-        .includes(text) ;
+        .includes(text) /* By name */ || 
+        
+        item.id.toString().toLowerCase()
+        .includes(text) /* And by Id */ ;
     });
     
 
