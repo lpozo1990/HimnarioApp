@@ -10,13 +10,50 @@
 </ion-header>
 
 <ion-content fullscreen="true" no-border no-scroll class="ion-padding">
-  <ion-list>
-    <ion-list-header> Datos de Contacto </ion-list-header>
-    <ion-item>
-      <ion-icon name="mail"></ion-icon> lpozo1990@gmail.com
+  <ion-card>
+    <!-- Yunior's card -->
+    <ion-item class="ion-padding">
+      <ion-avatar slot="start">
+        <img src="../../assets/user1.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Yunior Peña Ricardo</h3>
+        <p>Miembro de Iglesia de Dios</p>
+        <!-- The button to call it -->
+        <ion-button slot="end" (click)="call('+5354799029')" fill="outline" shape="round" color="primary"><ion-icon name="call"></ion-icon></ion-button>
+        <!-- and the button to go to the Facebook profile -->
+        <ion-button slot="end" fill="outline" shape="round" color="primary"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+      </ion-label>
     </ion-item>
-    <ion-item (click)="call()">
-      <ion-icon name="call"></ion-icon> +53 58766375
+
+    <!-- Brunet's card -->
+    <ion-item class="ion-padding">
+      <ion-avatar slot="start">
+        <img src="../../assets/user2.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Brunet</h3>
+        <p>Pastor en Iglesia de Dios</p>
+        <!-- The button to call it -->
+        <ion-button slot="end" (click)="call('+5354799029')" fill="outline" shape="round" color="primary"><ion-icon name="call"></ion-icon></ion-button>
+        <!-- and the button to go to the Facebook profile -->
+        <ion-button slot="end" fill="outline" shape="round" color="primary"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+      </ion-label>
     </ion-item>
-  </ion-list>
+
+    <!-- My card -->
+    <ion-item class="ion-padding">
+      <ion-avatar slot="start">
+        <img src="../../assets/user3.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Luis Miguel Pozo Gonzalez</h3>
+        <p>Programador</p>
+        <!-- The button to call it -->
+        <ion-button slot="end" (click)="call('+5358766375')" fill="outline" shape="round" color="primary"><ion-icon name="call"></ion-icon></ion-button>
+        <!-- and the button to go to the Facebook profile -->
+        <ion-button slot="end" fill="outline" shape="round" color="primary"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-card>
 </ion-content>
