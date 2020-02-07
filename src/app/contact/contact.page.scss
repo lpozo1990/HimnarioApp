@@ -1,11 +1,16 @@
 ion-content {
-/*   --background: url('/assets/cross-background.jfif')  no-repeat  no-repeat 52% center/cover; */
-/*     opacity: 0.6;
-    height: 2rem; */
-    ion-list-header {
-      font-size: 1.3rem;
+  ion-card {
+    ion-item {
+      --border-radius: 15px;
     }
-    ion-list ion-item {
-      font-size: 1rem;
+    ion-avatar {
+      width: 30% !important;  
+      height: 30% !important;  
     }
+    box-shadow: none !important;
+  }
+ --background: url('/assets/cross-background.jfif')  no-repeat  no-repeat 52% center/cover; 
+    opacity: 0.8;
+    height: 2rem; 
+
 }
