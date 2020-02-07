@@ -34,6 +34,7 @@
     "core-js": "^2.5.4",
     "ionic-cache": "^4.1.0",
     "ionic-cache-observable": "0.0.6",
+    "mx.ferreyra.callnumber": "0.0.2",
     "native-run": "^0.3.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
@@ -83,7 +84,8 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-      "mx.ferreyra.callnumber": {}
+      "mx.ferreyra.callnumber": {},
+      "call-number": {}
     },
     "platforms": [
       "android",

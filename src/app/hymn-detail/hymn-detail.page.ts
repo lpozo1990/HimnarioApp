@@ -2,7 +2,6 @@ import { IData } from './../data.interface';
 import { DataService } from './../data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -12,15 +11,20 @@ import { Observable } from 'rxjs';
 })
 export class HymnDetailPage implements OnInit {
   item: IData;
+  body;
+
+
   constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
 
   ngOnInit() {
     const itemId = this.route.snapshot.paramMap.get('id');
-    console.log(itemId);
     this.dataService.getHymn(+itemId).subscribe(
       res => {
         this.item = res;
+        /* visit this url to see the regular expression in action: https://regex101.com/r/tSzc7D/3 */
+        /* Ok, first we look for the text between chorus and paragraph 2, then we surround it with the <b> tags to make it bold */
+        this.body = this.item.body.replace(/((-- Coro --)([\S\s]*?)(-- 2 --))/igm,"$2 <b> $3 </b> $4");
       }
     );
     

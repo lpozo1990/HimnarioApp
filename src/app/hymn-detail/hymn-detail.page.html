@@ -10,7 +10,9 @@
 
 
 <ion-content class="ion-padding ion-text-center">
-  <ion-col style="white-space: pre-wrap; font-size: 1.2rem; margin: auto;">
-    {{item?.body}}
+  <ion-col [innerHTML]="body" style="white-space: pre-wrap;
+                                           font-size: 1.2rem;
+                                           margin: auto;
+                                           font-style: italic;">
   </ion-col>
 </ion-content>
