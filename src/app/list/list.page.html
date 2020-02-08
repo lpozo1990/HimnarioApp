@@ -4,8 +4,11 @@
       <ion-menu-button></ion-menu-button>
       <ion-title>Lista de Himnos</ion-title>
     </ion-buttons>
+    <ion-buttons slot="end"> 
+      <ion-icon (click)="activateSearch()" item-right name="search" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
-  <ion-searchbar no-border (ionChange)="search($event)" placeholder=""></ion-searchbar>
+  <ion-searchbar *ngIf="wannaSearch" (ionChange)="search($event)" placeholder=""></ion-searchbar>
 </ion-header>
 
 <ion-content>
@@ -18,6 +21,7 @@
   </ion-list>
 </ion-content>
 
+<!-- This is the spinner that is displayed when the list is loading -->
 <div class="spin" *ngIf="!himnos">
   <ion-spinner name="dots"></ion-spinner>
 </div>

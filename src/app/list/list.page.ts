@@ -16,6 +16,7 @@ export class ListPage implements OnInit {
   himnos: IData[];
   count = 0;
   textBox = '';
+  wannaSearch: boolean;
 
   constructor(public nav: NavController,
     public dataService: DataService,
@@ -33,10 +34,12 @@ export class ListPage implements OnInit {
   }
 
 
-
+  activateSearch() {
+    this.wannaSearch = !this.wannaSearch;
+  }
 
   ngOnInit() {
-
+    this.wannaSearch = false;
   }
 
 }
