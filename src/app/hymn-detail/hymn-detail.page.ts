@@ -12,12 +12,17 @@ import { Component, OnInit } from '@angular/core';
 export class HymnDetailPage implements OnInit {
   item: IData;
   body;
+  visibleButtons: boolean;
 
 
   constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
+  released() {
+    this.visibleButtons = !this.visibleButtons;
+  }
 
   ngOnInit() {
+    this.visibleButtons = false;
     const itemId = this.route.snapshot.paramMap.get('id');
     this.dataService.getHymn(+itemId).subscribe(
       res => {

@@ -1,3 +1,4 @@
+
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { PipesModule } from './pipes/pipes.module';
 import { DataService } from './data.service';
@@ -18,7 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CacheModule } from "ionic-cache";
 /* Storage */
 import { IonicStorageModule } from '@ionic/storage';
-
+/* Using Hammerjs */
+import { IonicGestureConfig } from './utils/IonicGestureConfig';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,6 +41,7 @@ import { IonicStorageModule } from '@ionic/storage';
     CallNumber,
     DataService,
     SplashScreen,
+    { provide: HAMMER_GESTURE_CONFIG, useClass: IonicGestureConfig },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

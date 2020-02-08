@@ -10,9 +10,19 @@
 
 
 <ion-content class="ion-padding ion-text-center">
-  <ion-col [innerHTML]="body" style="white-space: pre-wrap;
-                                           font-size: 1.2rem;
-                                           margin: auto;
-                                           font-style: italic;">
+  <ion-col ion-long-press [interval]="400" (pressEnded)="released()">
+         <p style="white-space: pre-wrap;
+         font-size: 1.2rem;
+         margin: auto;
+         font-style: italic;" [innerHTML]="body"></p>
+                  
   </ion-col>
+      <ion-fab *ngIf="visibleButtons" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button size="small" (click)="changeFontSize(0.2)">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="danger" size="small" (click)="changeFontSize(-0.2)">
+          <ion-icon name="remove"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>

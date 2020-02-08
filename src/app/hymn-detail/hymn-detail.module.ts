@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { HymnDetailPageRoutingModule } from './hymn-detail-routing.module';
 
 import { HymnDetailPage } from './hymn-detail.page';
+import { LongPressModule } from 'ionic-long-press';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HymnDetailPageRoutingModule
+    HymnDetailPageRoutingModule,
+    LongPressModule
   ],
   declarations: [HymnDetailPage]
 })
