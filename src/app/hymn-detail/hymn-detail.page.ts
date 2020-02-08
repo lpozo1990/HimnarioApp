@@ -13,12 +13,29 @@ export class HymnDetailPage implements OnInit {
   item: IData;
   body;
   visibleButtons: boolean;
+  initialFontSize = 1.2;
 
 
   constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
+
+  /* function that is launched when the long touch on the text is released */
   released() {
     this.visibleButtons = !this.visibleButtons;
+  }
+
+  /* logic to increase and decrease the font size of the paragraph */
+  IncreaseFontSize(){
+    this.initialFontSize += 0.5;
+    console.log(this.initialFontSize);
+  }
+
+  DecreaseFontSize() {
+    this.initialFontSize -= 0.5;
+    console.log(this.initialFontSize);
+    if (this.initialFontSize <  1.2) {
+      this.initialFontSize = 1.2;
+    }
   }
 
   ngOnInit() {

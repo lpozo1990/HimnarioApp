@@ -11,17 +11,16 @@
 
 <ion-content class="ion-padding ion-text-center">
   <ion-col ion-long-press [interval]="400" (pressEnded)="released()">
-         <p style="white-space: pre-wrap;
-         font-size: 1.2rem;
+         <p [style.font-size.rem]="initialFontSize" style="white-space: pre-wrap;
          margin: auto;
          font-style: italic;" [innerHTML]="body"></p>
                   
   </ion-col>
       <ion-fab *ngIf="visibleButtons" vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button size="small" (click)="changeFontSize(0.2)">
+        <ion-fab-button size="small" (click)="IncreaseFontSize()">
           <ion-icon name="add"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="danger" size="small" (click)="changeFontSize(-0.2)">
+        <ion-fab-button color="danger" size="small" (click)="DecreaseFontSize()">
           <ion-icon name="remove"></ion-icon>
         </ion-fab-button>
     </ion-fab>
