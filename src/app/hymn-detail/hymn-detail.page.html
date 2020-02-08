@@ -16,12 +16,17 @@
          font-style: italic;" [innerHTML]="body"></p>
                   
   </ion-col>
+  <!-- Here the floating buttons that will be displayed when the text is pressed 
+        for a long time and are responsible for controlling the font size -->
       <ion-fab *ngIf="visibleButtons" vertical="bottom" horizontal="end" slot="fixed">
+        <!-- The increase button -->
         <ion-fab-button size="small" (click)="IncreaseFontSize()">
           <ion-icon name="add"></ion-icon>
         </ion-fab-button>
+        <!-- and the decrement button -->
         <ion-fab-button color="danger" size="small" (click)="DecreaseFontSize()">
           <ion-icon name="remove"></ion-icon>
         </ion-fab-button>
     </ion-fab>
+
 </ion-content>

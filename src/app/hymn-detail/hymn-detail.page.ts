@@ -26,12 +26,12 @@ export class HymnDetailPage implements OnInit {
 
   /* logic to increase and decrease the font size of the paragraph */
   IncreaseFontSize(){
-    this.initialFontSize += 0.5;
+    this.initialFontSize += 0.2;
     console.log(this.initialFontSize);
   }
 
   DecreaseFontSize() {
-    this.initialFontSize -= 0.5;
+    this.initialFontSize -= 0.2;
     console.log(this.initialFontSize);
     if (this.initialFontSize <  1.2) {
       this.initialFontSize = 1.2;
