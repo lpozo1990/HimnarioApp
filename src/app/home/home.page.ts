@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  imgURL = 'assets/home-background.jpg';
+  imgURL = 'assets/icons8-santa-biblia-96.png';
   subscription: any;
   constructor(private platform: Platform) { }
 

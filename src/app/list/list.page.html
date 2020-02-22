@@ -15,7 +15,7 @@
   <ion-list lines="none">
     <ion-item class="ion-justify-content-center" detail [routerLink]="'/detail/' + item.id"
       *ngFor="let item of himnos  | search:textBox"> <br>
-      <ion-icon name="book"></ion-icon>
+      <ion-icon color="primary" name="book"></ion-icon>
       <ion-label class="ion-justify-content-center">{{ item.id }} - {{ item.title }}</ion-label>
     </ion-item>
   </ion-list>
