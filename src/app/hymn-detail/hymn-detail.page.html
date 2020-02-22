@@ -10,7 +10,7 @@
 
 
 <ion-content class="ion-padding ion-text-center">
-  <ion-col ion-long-press [interval]="400" (pressEnded)="released()">
+  <ion-col ion-long-press [interval]="600" (longPressed)="released()">
          <p [style.font-size.rem]="initialFontSize" style="white-space: pre-wrap;
          margin: auto;
          font-style: italic;" [innerHTML]="body"></p>
