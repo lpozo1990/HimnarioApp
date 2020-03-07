@@ -9,8 +9,13 @@ ion-content {
     }
     box-shadow: none !important;
   }
- --background: url('/assets/cross-background.jfif')  no-repeat  no-repeat 52% center/cover; 
-    opacity: 0.8;
+ --background: url('/assets/cross-background.jfif')    no-repeat 52% center/cover; 
+    opacity: 0.5;
     height: 2rem; 
+    overflow: hidden;
+    color: rgb(0, 0, 0)
 
 }
+/* ion-icon {
+  --ionicon-stroke-width: 50px;
+} */
