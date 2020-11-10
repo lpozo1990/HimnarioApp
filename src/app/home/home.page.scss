@@ -1,18 +1,19 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
-}
-
-  q {
-    font-family: 'QuickSandBold';
-  }
-
-
-  ion-icon {
-    cursor: pointer;
-}
-
 div {
   margin-left: auto;
   margin-right: auto;
+}
+ion-content {
+  --background: url("/assets/pexels-wendy-van-zyl-1112048.jpg") no-repeat 52%
+    center/cover;
+  opacity: 0.5;
+  height: 2rem;
+  overflow: hidden;
+}
+
+div {
+  width: 100%;
+  margin-top: 70vh;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
 }
