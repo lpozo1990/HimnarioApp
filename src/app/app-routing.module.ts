@@ -19,10 +19,7 @@ const routes: Routes = [
     path: 'detail/:id',
     loadChildren: () => import('./hymn-detail/hymn-detail.module').then(m => m.HymnDetailPageModule)
   },
-  {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
-  }
+
 ];
 
 @NgModule({

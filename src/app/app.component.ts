@@ -22,11 +22,6 @@ export class AppComponent {
       url: '/list',
       icon: 'list'
     },
-    {
-      title: 'Contacto',
-      url: '/contact',
-      icon: 'contact'
-    }
   ];
 
   constructor(
