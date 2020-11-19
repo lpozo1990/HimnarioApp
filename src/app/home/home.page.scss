@@ -1,19 +1,21 @@
-div {
-  margin-left: auto;
-  margin-right: auto;
-}
-ion-content {
-  --background: url("/assets/pexels-wendy-van-zyl-1112048.jpg") no-repeat 52%
+/*   --background: url("/assets/pexels-wendy-van-zyl-1112048.jpg") no-repeat 52%
     center/cover;
-  opacity: 0.5;
-  height: 2rem;
-  overflow: hidden;
-}
+  overflow: hidden; */
 
 div {
   width: 100%;
-  margin-top: 70vh;
   display: flex !important;
-  align-items: flex-end !important;
+  align-items: flex-start !important;
   justify-content: center !important;
+}
+
+img {
+  margin-top: 25vh;
+  margin-bottom: 15vh;
+  width: max-content;
+}
+ion-button {
+  width: 30vh;
+  height: 6vh;
+  box-shadow: grey;
 }

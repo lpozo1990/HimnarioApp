@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class DataService {
   hymns: IData[];
   hymn: IData;
-  private himnosUrl: any = 'assets/data.json';
+  private himnosUrl: any = 'assets/copy.json';
   constructor(private http: HttpClient, private cache: CacheService) { }
 
   getHymns(): Observable<IData[]> {
