@@ -1,5 +1,7 @@
 import { Platform } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { CacheService } from 'ionic-cache';
+import { DataService } from "../data.service";
 
 @Component({
   selector: 'app-home',
@@ -9,18 +11,25 @@ import { Component, OnInit } from '@angular/core';
 export class HomePage {
   imgURL = 'assets/icons8-santa-biblia-96.png';
   subscription: any;
-  constructor(private platform: Platform) { }
-
+  get noCache() {
+    let isCachePresent;
+    this.cache.getItem('himnos').catch(
+      res => isCachePresent = res
+    )
+    return isCachePresent
+  }
+  constructor(private platform: Platform, private cache:CacheService, private dataService:DataService) { }
   ngOnInit() {
+    if(!this.noCache){
+      this.dataService.getHymns().subscribe()
+    }
     this.subscription = this.platform.backButton.subscribe(() => {
       navigator['app'].exitApp();
-      console.log("exitapp!!!");
     });
   }
 
   ionViewWillLeave() {
     this.subscription.unsubscribe();
-    console.log("exitapp again!!!");
   }
 
 }

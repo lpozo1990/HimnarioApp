@@ -5,10 +5,10 @@
       <ion-title>Lista de Himnos</ion-title>
     </ion-buttons>
     <ion-buttons slot="end"> 
-      <ion-icon (click)="activateSearch()" item-right name="search" size="large"></ion-icon>
+      <ion-icon (click)="activateSearch(searchInput)" item-right name="search" size="large"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
-  <ion-searchbar *ngIf="wannaSearch" (ionChange)="search($event)" placeholder=""></ion-searchbar>
+  <ion-searchbar #searchInput *ngIf="wannaSearch" (ionChange)="search($event)" placeholder=""></ion-searchbar>
 </ion-header>
 
 <ion-content>

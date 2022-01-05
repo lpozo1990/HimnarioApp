@@ -17,9 +17,7 @@ export class DataService {
 
   getHymns(): Observable<IData[]> {
     let request = this.http.get<IData[]>(this.himnosUrl);
-    let cacheKey = this.himnosUrl;
-    return this.cache.loadFromObservable(cacheKey, request);
-
+    return this.cache.loadFromObservable('himnos', request);
   }
 
   getHymn(id: number): Observable<IData> {

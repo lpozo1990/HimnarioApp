@@ -20,13 +20,10 @@ export class ListPage implements OnInit {
 
   constructor(public nav: NavController,
     public dataService: DataService,
-    private http: HttpClient,
     private cache: CacheService) {
-    this.dataService.getHymns().subscribe(
-      res => {
-        this.himnos = res;
-      }
-    );
+        this.cache.getItem('himnos').then(
+          himnos => this.himnos = himnos
+        )
   }
 
   search(event) {
@@ -34,8 +31,9 @@ export class ListPage implements OnInit {
   }
 
 
-  activateSearch() {
+  activateSearch(input:HTMLInputElement) {
     this.wannaSearch = !this.wannaSearch;
+    this.textBox  =  ''
   }
 
   ngOnInit() {

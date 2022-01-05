@@ -34,7 +34,7 @@ import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
     HttpClientModule,
     PipesModule,
     IonicStorageModule.forRoot(),
-    CacheModule.forRoot({ keyPrefix: 'my-app-cache' })
+    CacheModule.forRoot()
   ],
   providers: [
     StatusBar,
